@@ -24,7 +24,7 @@ fn main() {
         let mut input = String::new();
         io::stdin().read_line(&mut input);
 
-        let number: u32 = match input.trim().parse() {
+        let input: u32 = match input.trim().parse() {
             Ok(num) => num,
             Err(_) => {
                 println!("Not number, again: ");
@@ -32,10 +32,10 @@ fn main() {
             }
         };
 
-        if is_prime(number) {
-            println!("{} is a prime.", number);
+        if is_prime(input) {
+            println!("{} is a prime.", input);
         } else {
-            println!("{} not a prime.", number);
+            println!("{} not a prime.", input);
         }
     }
 }
